@@ -16,11 +16,6 @@ public class Cliente extends UnicastRemoteObject implements IListener {
         System.out.println("Recebi nova mensagem: '" + msg + "'");
     }
     
-    @Override
-    public void novoClienteInscrito() throws RemoteException {
-        System.out.println("Novo cliente...");
-    }
-    
     public static void main(String[] args) throws RemoteException, NotBoundException {
         
         IComunicacao cc = (IComunicacao) LocateRegistry.getRegistry(1099).lookup("Servico");

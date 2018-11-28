@@ -27,15 +27,6 @@ class Comunicacao extends UnicastRemoteObject implements IComunicacao  {
     @Override
     public synchronized void adicionarListener(IListener l) throws RemoteException {
         System.out.println("Adicionado listener");
-        for (int i = 0; i < listeneres.size(); i++) {
-            try {
-                listeneres.get(i).novoClienteInscrito();
-            } 
-            catch (RemoteException ex) {
-                listeneres.remove(i);
-                System.out.println("Um listener terminou");
-            }
-        }
         listeneres.add(l);
     }
 

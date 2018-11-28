@@ -10,7 +10,6 @@ import java.rmi.RemoteException;
 
 public interface IListener extends Remote {
     void recebiNovaMensagem(String msg) throws RemoteException;
-    void novoClienteInscrito() throws RemoteException;
 }
 
 
